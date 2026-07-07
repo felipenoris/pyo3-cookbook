@@ -1,0 +1,7 @@
+/target
+.DS_Store
+Cargo.lock
+.python-version
+uv.lock
+**/__pycache__
+**/*.so
