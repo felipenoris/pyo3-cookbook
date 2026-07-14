@@ -32,5 +32,10 @@ fn axpy_py<'py>(
 fn _core(_py: Python, m: &Bound<PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(triple, m)?)?;
     m.add_function(wrap_pyfunction!(axpy_py, m)?)?;
+    m.add_class::<plano_contas::Conta>()?;
+    m.add_class::<plano_contas::Veiculo>()?;
+    m.add_class::<plano_contas::RelacionamentoContaHierarquia>()?;
+    m.add_class::<plano_contas::HierarquiaContas>()?;
+    m.add_class::<plano_contas::Lancamento>()?;
     Ok(())
 }

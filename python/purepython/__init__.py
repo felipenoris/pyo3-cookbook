@@ -1,6 +1,7 @@
 
 from ._core import triple
 from ._core import axpy
+from ._core import Veiculo
 
 def pure_python_sum(a, b):
     return a + b
