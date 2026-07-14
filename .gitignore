@@ -5,3 +5,4 @@ Cargo.lock
 uv.lock
 **/__pycache__
 **/*.so
+**/~$*
