@@ -179,6 +179,12 @@ for i in 0..batch.num_rows() {
 }
 ```
 
+# master data vs objetos transacionais
+
+Carregar em memória master data: contas, hierarquia de contas.
+
+Utilizar batch para objetos transacionais, grande volume.
+
 # References
 
 - <https://pyo3.rs/v0.29.0/>

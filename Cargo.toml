@@ -16,5 +16,8 @@ name = "_core"
 crate-type = ["cdylib"]
 
 [dependencies]
+chrono = "0.4.45"
 numpy = "0.29.0"
 pyo3 = "0.29.0"
+rust_decimal = "1.42.1"
+serde_json = "1.0.150"

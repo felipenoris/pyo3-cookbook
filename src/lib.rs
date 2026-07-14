@@ -2,6 +2,7 @@ use pyo3::prelude::*;
 use numpy::ndarray::{ArrayD, ArrayViewD, ArrayViewMutD};
 use numpy::{IntoPyArray, PyArrayDyn, PyReadonlyArrayDyn, PyArrayMethods};
 
+mod plano_contas;
 
 #[pyfunction]
 fn triple(x: usize) -> usize {
