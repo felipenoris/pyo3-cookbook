@@ -16,9 +16,10 @@ name = "_core"
 crate-type = ["cdylib"]
 
 [dependencies]
+arrow = "59.1.0"
 chrono = "0.4.45"
 numpy = "0.29.0"
 pyo3 = { version = "0.29.0", features = ["chrono", "rust_decimal"] }
+pyo3-arrow = "0.19.0"
 rust_decimal = "1.42.1"
 serde_json = "1.0.150"
-

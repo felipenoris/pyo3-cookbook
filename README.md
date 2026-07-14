@@ -185,6 +185,38 @@ Carregar em memória master data: contas, hierarquia de contas.
 
 Utilizar batch para objetos transacionais, grande volume.
 
+# Definindo schema da arrow table
+
+```python
+import pyarrow as pa
+
+schema = pa.schema([
+    ("id_lancamento", pa.int64()),
+    ("id_conta", pa.int64()),
+    ("data", pa.date32()),
+    ("valor", pa.decimal128(18, 2)),
+    ("meta", pa.map_(pa.string(), pa.string())),
+])
+
+table = pa.Table.from_pandas(
+    df,
+    schema=schema,
+    preserve_index=False,
+)
+```
+
+Na definição de schema no arrow, as colunas são nullable por padrão.
+Para definir explicitamente, utilizar:
+
+```python
+import pyarrow as pa
+
+schema = pa.schema([
+    pa.field("id_conta", pa.int64(), nullable=False),
+    pa.field("id_parent", pa.int64(), nullable=True),
+])
+```
+
 # References
 
 - <https://pyo3.rs/v0.29.0/>
